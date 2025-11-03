@@ -1,8 +1,12 @@
-/* src/input.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-.btn {
-  @apply bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600;
+/* LOGIN FOR STYLES */
+
+.active-tab {
+  /* @apply py-4 text-blue-600 border-b-2 border-blue-600 font-semibold; */
+  padding: 1rem 0;
+  color: #155dfc;
+  border-bottom: 2px solid #155dfc;
+  font-weight: 600;
+  transition: 0.2s;
 }

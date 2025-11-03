@@ -1,18 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Test</title>
-  <link rel="stylesheet" href="./src/output.css" />
-</head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-  <h1 class="text-4xl font-bold text-emerald-500">
-    Tailwind is working! 🎉
-  </h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Moniepoint</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="shortcut icon"
+      href="/asset/images/moniepoint-logo.svg"
+      type="image/x-icon"
+    />
+  </head>
 
-  <button class="btn">Click me</button>
-<div class="card">Hello</div>
+  <body
+    class="bg-gray-100 flex items-center justify-center min-h-screen box-border m-0 p-0"
+  >
+    <div class="pt-20 pb-6 px-6 bg-blue-900 min-h-screen w-full">
+      <div class="mx-auto">
+        <div
+          class="text-blue-900 bg-white w-fit py-1.5 px-3 rounded-xl font-bold text-2xl mb-4"
+        >
+          M
+        </div>
 
-</body>
+        <h2 class="text-2xl font-bold mb-6 text-white">Log In to Moniepoint</h2>
+
+        <div
+          class="bg-white rounded-lg px-4 py-8 shadow-lg w-full max-w-sm mx-auto"
+        >
+          <!-- tabs -->
+          <div class="flex border-b border-gray-400 mb-4 text-sm">
+            <button id="phoneLogin-btn" class="active-tab hover:text-blue-600">
+              Phone Number
+            </button>
+
+            <button
+              id="username-btn"
+              class="w-1/2 py-4 text-gray-600 font-semibold hover:text-blue-600"
+            >
+              Username
+            </button>
+          </div>
+
+          <!-- Phone sign in -->
+          <div id="phone-num-login">
+            <!-- login form -->
+            <form id="login-form" method="post" novalidate class="space-y-6">
+              <div class="relative flex items-center">
+                <span
+                  class="absolute top-2.5 px-2 text-gray-400 border-r border-gray-300 flex items-center"
+                >
+                  <img
+                    src="/asset/images/flag-for-flag-nigeria-svgrepo-com.svg"
+                    width="15"
+                    alt="flag"
+                  />&nbsp; +234
+                </span>
+
+                <input
+                  id="login-form-phone-num"
+                  name="phone"
+                  type="tel"
+                  placeholder="Phone Number"
+                  maxlength="10"
+                  required
+                  class="w-full border border-gray-400 rounded-sm px-22 py-2 outline-gray-500"
+                />
+              </div>
+
+              <button
+                id="login-form-submit-btn"
+                type="submit"
+                disabled
+                class="w-full bg-gray-300 text-gray-500 py-3 rounded-sm font-bold cursor-not-allowed transition"
+              >
+                Next
+              </button>
+            </form>
+
+            <div class="text-center text-sm mt-4">
+              <a
+                href="#"
+                class="text-blue-600 font-bold capitalize hover:underline"
+                >Change my phone number</a
+              >
+            </div>
+
+            <div class="flex justify-center space-x-2 text-sm my-6">
+              <p class="text-blue-950">Lost your phone?</p>
+              <a href="#" class="text-blue-600 hover:underline flex gap-2"
+                >Lock your account<img src="/asset/images/lock.svg" alt="lock"
+              /></a>
+            </div>
+          </div>
+
+          <!-- Username sign in -->
+          <div id="username-login" class="hidden">
+            <form id="form" method="post" novalidate>
+              <div class="relative flex items-center">
+                <span
+                  class="absolute top-2.5 px-2 text-gray-400 flex items-center"
+                >
+                  🧑‍🦱
+                </span>
+
+                <input
+                  id="username"
+                  name="username"
+                  type="text"
+                  placeholder="Username"
+                  required
+                  class="w-full border border-gray-400 rounded-sm px-10 py-2 outline-gray-500"
+                />
+              </div>
+
+              <p class="errormssg text-red-500 text-xs hover:underline"></p>
+
+              <p class="text-blue-600 text-sm hover:underline py-3 text-right">
+                Forgot Username?
+              </p>
+
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white cursor-pointer py-3 rounded-sm font-bold transition"
+              >
+                Next
+              </button>
+
+              <div class="flex justify-center space-x-2 text-sm my-6">
+                <p class="text-blue-950">Lost your phone?</p>
+                <a href="#" class="text-blue-600 hover:underline flex gap-2"
+                  >Lock your account<img
+                    src="/asset/images/lock.svg"
+                    alt="lock"
+                /></a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-6 px-6 py-3 rounded-xl bg-blue-50/20 backdrop-blur-3xl w-fit mx-auto"
+        >
+          <p class="text-sm text-gray-300">
+            New to Moniepoint?
+            <a href="#" class="text-white font-semibold hover:underline"
+              >Sign Up</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <p class="text-[10px] text-nowrap text-center text-gray-400 mt-20">
+        Licensed by the
+        <span class="text-gray-200">Central Bank of Nigeria</span> and insured
+        by the <span class="text-gray-200"> NDIC.</span>
+      </p>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
 </html>

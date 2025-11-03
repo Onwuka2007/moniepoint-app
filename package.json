@@ -1,6 +1,18 @@
 {
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/cli": "^4.1.16"
+  },
+  "name": "moniepoint-app",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "devDependencies": {
     "tailwindcss": "^4.1.16"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
