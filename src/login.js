@@ -3,6 +3,8 @@
 const phoneInput = document.getElementById("login-form-phone-num");
 const submitBtn = document.getElementById("login-form-submit-btn");
 
+const numForm = document.getElementById("login-form");
+
 phoneInput.addEventListener("input", () => {
   const valid = phoneInput.value.trim().length === 10;
 
@@ -25,6 +27,19 @@ phoneInput.addEventListener("input", () => {
   }
 });
 
+numForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const num = phoneInput.value.trim();
+  let error = document.querySelector(".errormssg");
+
+  if (num === "8131163888") {
+    window.location.href = "./dashboard.html";
+    numForm.reset();
+  } else {
+    error.textContent = "⚠️ Phone number not recognised.";
+  }
+});
 
 // switch tabs
 const phoneLogin = document.getElementById("phone-num-login");
@@ -54,13 +69,12 @@ const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const username = document.getElementById("username").value.trim();
-  const error = document.querySelector(".errormssg");
-
+  const errUser = document.querySelector(".errorUsername");
   if (username === "manny") {
-    error.textContent = "";
+    errUser.textContent = "";
     window.location.href = "./dashboard.html";
     form.reset();
   } else {
-    error.textContent = "⚠️Enter valid username";
+    errUser.textContent = "⚠️Enter valid username";
   }
 });
