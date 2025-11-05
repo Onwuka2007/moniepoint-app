@@ -10,3 +10,12 @@
   font-weight: 600;
   transition: 0.2s;
 }
+
+.hero-bg {
+  transition: opacity 0.8s ease;
+  opacity: 0;
+}
+
+.hero-bg.active {
+  opacity: 1;
+}
